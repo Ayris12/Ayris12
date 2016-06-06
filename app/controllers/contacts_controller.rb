@@ -11,6 +11,7 @@ class ContactsController < ApplicationController
       
       ContactMailer.contact_email(name, email, body).deliver
       
+      #Message op de website
       
       flash[:success] = 'Message sent.'
       redirect_to new_contact_path
